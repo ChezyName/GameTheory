@@ -44,6 +44,11 @@ html,body, #root {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+  transition: all .2s ease-in-out
+}
+
+#InnerImage:hover {
+  transform: scale(3);
 }
 
 @keyframes rotateOTHER {
@@ -57,4 +62,36 @@ html,body, #root {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+}
+
+#GAME {
+  background-color: rgba(1,227,31,0.25);
+  transition: background-color 0.25s ease-in-out;
+}
+#GAME:hover {
+  background-color: rgba(1,227,31,1);
+}
+
+#FILM {
+  background-color: rgba(254, 0, 2,0.25);
+  transition: background-color 0.25s ease-in-out;
+}
+#FILM:hover {
+  background-color: rgba(254, 0, 2,1);
+}
+
+#FOOD {
+  background-color: rgba(255,255,1,0.25);
+  transition: background-color 0.25s ease-in-out;
+}
+#FOOD:hover {
+  background-color: rgba(255,255,1,1);
+}
+
+#STYLE {
+  background-color: rgba(0,192,255,0.25);
+  transition: background-color 0.25s ease-in-out;
+}
+#STYLE:hover {
+  background-color: rgba(0,192,255,1);
 }

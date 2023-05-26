@@ -3,6 +3,7 @@ import './App.css'
 
 import AllFour from "./assets/TheoryRing.png";
 import Trophy from "./assets/GameTheoryTrophy.png";
+import Quadrants from './Quadrants/Quadrants';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           width="550vw"
           style={{
             userSelect: 'none',
+            pointerEvents: 'none',
             zIndex: "5"
           }}
         />
@@ -42,50 +44,16 @@ function App() {
           width="550vw"
           style={{
             userSelect: 'none',
+            pointerEvents: 'none',
             zIndex: "5"
           }}
         />
       </div>
       
-      <div id="GAME" style={{
-        width: "50vw",
-        height: "50vh",
-        position: "absolute",
-        zIndex: '0',
-        left: "0",
-        top: "0",
-        backgroundColor: "rgba(1,227,31,0.25)"
-      }}></div>
-
-      <div id="FILM" style={{
-        width: "50vw",
-        height: "50vh",
-        position: "absolute",
-        zIndex: '0',
-        left: "50vw",
-        top: "0",
-        backgroundColor: "rgba(254, 0, 2,0.25)"
-      }}></div>
-
-      <div id="FOOD" style={{
-        width: "50vw",
-        height: "50vh",
-        position: "absolute",
-        zIndex: '0',
-        left: "0vw",
-        top: "50vh",
-        backgroundColor: "rgba(255,255,1,0.25)"
-      }}></div>
-
-      <div id="STYLE" style={{
-        width: "50vw",
-        height: "50vh",
-        position: "absolute",
-        zIndex: '0',
-        left: "50vw",
-        top: "50vh",
-        backgroundColor: "rgba(0,192,255,0.25)"
-      }}></div>
+      <Quadrants leftPos={0} topPos={0} namedID='GAME' link='https://www.youtube.com/@GameTheory'/>
+      <Quadrants leftPos={"50vw"} topPos={0} namedID='FILM' link='https://www.youtube.com/@FilmTheory'/>
+      <Quadrants leftPos={0} topPos={"50vh"} namedID='FOOD' link='https://www.youtube.com/@FoodTheory'/>
+      <Quadrants leftPos={"50vw"} topPos={"50vh"} namedID='STYLE' link='https://www.youtube.com/@StyleTheorists'/>
     </>
   )
 }
