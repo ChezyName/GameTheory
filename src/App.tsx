@@ -5,6 +5,10 @@ import AllFour from "./assets/TheoryRing.png";
 import Trophy from "./assets/GameTheoryTrophy.png";
 import Quadrants from './Quadrants/Quadrants';
 
+import FILM from "./assets/FILM.png"
+import FOOD from "./assets/FOOD.png"
+import STYLE from "./assets/STYLE.png"
+
 function App() {
   return (
     <>
@@ -50,10 +54,10 @@ function App() {
         />
       </div>
       
-      <Quadrants leftPos={0} topPos={0} namedID='GAME' link='https://www.youtube.com/@GameTheory'/>
-      <Quadrants leftPos={"50vw"} topPos={0} namedID='FILM' link='https://www.youtube.com/@FilmTheory'/>
-      <Quadrants leftPos={0} topPos={"50vh"} namedID='FOOD' link='https://www.youtube.com/@FoodTheory'/>
-      <Quadrants leftPos={"50vw"} topPos={"50vh"} namedID='STYLE' link='https://www.youtube.com/@StyleTheorists'/>
+      <Quadrants leftPos={0} topPos={0} namedID='GAME' image={Trophy} link='https://www.youtube.com/@GameTheory'/>
+      <Quadrants leftPos={"50vw"} topPos={0} namedID='FILM' image={FILM} link='https://www.youtube.com/@FilmTheory'/>
+      <Quadrants leftPos={0} topPos={"50vh"} namedID='FOOD' image={FOOD} link='https://www.youtube.com/@FoodTheory'/>
+      <Quadrants leftPos={"50vw"} topPos={"50vh"} namedID='STYLE' image={STYLE} link='https://www.youtube.com/@StyleTheorists'/>
     </>
   )
 }

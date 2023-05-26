@@ -1,13 +1,12 @@
-import React from 'react'
-
 type Quadrants = {
     leftPos:number|string,
     topPos:number|string,
     namedID:string,
     link:string,
+    image:any,
 }
 
-const Quadrants = ({leftPos,topPos,namedID,link}:Quadrants) => {
+const Quadrants = ({leftPos,topPos,namedID,link,image}:Quadrants) => {
 
     function openLink(){
         if(link != "" && link != null && link != undefined){
@@ -25,7 +24,22 @@ const Quadrants = ({leftPos,topPos,namedID,link}:Quadrants) => {
             left: leftPos,
             top: topPos,
             userSelect: 'none',
-        }} onClick={openLink}></div>
+            display: 'flex',
+            justifyContent: "center",
+            alignItems: "center",
+        }} onClick={openLink}>
+            <img
+            className="QuadImage"
+            src={image} alt="ImageName"
+            height="500vw"
+            width="500vw"
+            style={{
+                userSelect: 'none',
+                pointerEvents: 'none',
+                zIndex: "5"
+            }}
+            />
+        </div>
     )
 }
 

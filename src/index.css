@@ -64,12 +64,22 @@ html,body, #root {
   animation-fill-mode: forwards;
 }
 
+.QuadImage {
+  background-color: rgba(1, 1, 1, 0);
+  opacity: 0.8;
+  transition: all 0.25s ease-in-out;
+}
+
 #GAME {
   background-color: rgba(1,227,31,0.25);
   transition: background-color 0.25s ease-in-out;
 }
 #GAME:hover {
   background-color: rgba(1,227,31,1);
+}
+#GAME:hover .QuadImage {
+  opacity: 1;
+  transform: scale(1.15);
 }
 
 #FILM {
@@ -79,6 +89,11 @@ html,body, #root {
 #FILM:hover {
   background-color: rgba(254, 0, 2,1);
 }
+#FILM:hover .QuadImage {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
 
 #FOOD {
   background-color: rgba(255,255,1,0.25);
@@ -87,6 +102,11 @@ html,body, #root {
 #FOOD:hover {
   background-color: rgba(255,255,1,1);
 }
+#FOOD:hover .QuadImage {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
 
 #STYLE {
   background-color: rgba(0,192,255,0.25);
@@ -94,4 +114,8 @@ html,body, #root {
 }
 #STYLE:hover {
   background-color: rgba(0,192,255,1);
+}
+#STYLE:hover .QuadImage {
+  opacity: 1;
+  transform: scale(1.15);
 }
