@@ -47,10 +47,6 @@ html,body, #root {
   transition: all .2s ease-in-out
 }
 
-#InnerImage:hover {
-  transform: scale(3);
-}
-
 @keyframes rotateOTHER {
   from {transform: rotate(0deg);}
   to {transform: rotate(-360deg);}
@@ -118,4 +114,10 @@ html,body, #root {
 #STYLE:hover .QuadImage {
   opacity: 1;
   transform: scale(1.15);
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

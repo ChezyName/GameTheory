@@ -1,63 +1,33 @@
 import { useState } from 'react'
 import './App.css'
 
-import AllFour from "./assets/TheoryRing.png";
 import Trophy from "./assets/GameTheoryTrophy.png";
 import Quadrants from './Quadrants/Quadrants';
+import SpiningLogo from './Quadrants/SpiningLogo';
 
 import FILM from "./assets/FILM.png"
 import FOOD from "./assets/FOOD.png"
 import STYLE from "./assets/STYLE.png"
+import IntroSequence from './Quadrants/IntroSequence';
 
 function App() {
+  const [A,setA] = useState(false);
+  const [B,setB] = useState(false);
+  const [C,setC] = useState(false);
+  const [D,setD] = useState(false);
+  const [E,setE] = useState(false);
+  const [End,setEnd] = useState(false);
+
   return (
     <>
-      <div style={{
-        height: "100vh",
-        width: '100vw',
-        display: 'flex',
-        justifyContent: "center",
-        alignItems: "center",
-        position: "absolute"
-      }}>
-        <img
-          id="OuterImage"
-          src={AllFour} alt="Four Rings"
-          height="550vw"
-          width="550vw"
-          style={{
-            userSelect: 'none',
-            pointerEvents: 'none',
-            zIndex: "5"
-          }}
-        />
-      </div>
-
-      <div style={{
-        height: "100vh",
-        width: '100vw',
-        display: 'flex',
-        justifyContent: "center",
-        alignItems: "center",
-        position: "absolute"
-      }}>
-        <img
-          id="InnerImage"
-          src={Trophy} alt="Trophy"
-          height="550vw"
-          width="550vw"
-          style={{
-            userSelect: 'none',
-            pointerEvents: 'none',
-            zIndex: "5"
-          }}
-        />
-      </div>
+      {E ? <SpiningLogo/> : ""}
       
-      <Quadrants leftPos={0} topPos={0} namedID='GAME' image={Trophy} link='https://www.youtube.com/@GameTheory'/>
-      <Quadrants leftPos={"50vw"} topPos={0} namedID='FILM' image={FILM} link='https://www.youtube.com/@FilmTheory'/>
-      <Quadrants leftPos={0} topPos={"50vh"} namedID='FOOD' image={FOOD} link='https://www.youtube.com/@FoodTheory'/>
-      <Quadrants leftPos={"50vw"} topPos={"50vh"} namedID='STYLE' image={STYLE} link='https://www.youtube.com/@StyleTheorists'/>
+      {!End ? <IntroSequence A={setA} B={setB} C={setC} D={setD} E={setE} End={setEnd}/> : "" }
+
+      { A ? <Quadrants leftPos={0} topPos={0} namedID='GAME' image={Trophy} link='https://www.youtube.com/@GameTheory'/> : "" }
+      { B ? <Quadrants leftPos={"50vw"} topPos={0} namedID='FILM' image={FILM} link='https://www.youtube.com/@FilmTheory'/> : "" }
+      { C ? <Quadrants leftPos={0} topPos={"50vh"} namedID='FOOD' image={FOOD} link='https://www.youtube.com/@FoodTheory'/> : "" }
+      { D ? <Quadrants leftPos={"50vw"} topPos={"50vh"} namedID='STYLE' image={STYLE} link='https://www.youtube.com/@StyleTheorists'/> : "" }
     </>
   )
 }
