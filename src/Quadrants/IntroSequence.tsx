@@ -14,34 +14,34 @@ type settings = {
 const IntroSequence = ({A,B,C,D,E,End}:settings) => {
     const vidPlayer:any = useRef();
     const [started,setStarted] = useState(false);
+    const [showWords,setShow] = useState(true);
 
     useEffect(() => {
-        AudioBeats();
     }, [])
 
     function AudioBeats(){
         setTimeout(() => {
             A(true);
-        },7027+600)
+        },6027+1000)
         setTimeout(() => {
             B(true);
-        },7464+600)
+        },6464+1000)
         setTimeout(() => {
             C(true);
-        },7785+600)
+        },6785+1000)
         setTimeout(() => {
             D(true);
-        },8132+600)
+        },7132+1000)
         setTimeout(() => {
             E(true);
-        },8479+600)
+        },7479+900)
     }
 
     return (
     <>
         { !started ? <div style={{width: '100%', height: '100%', left: '0', top: '0', position: 'absolute', zIndex: '25', backgroundColor: "black", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <button onClick={() => {vidPlayer.current.play(); setStarted(true)}} style={{width: '15vw', height: '4vw'}}>
-                START
+            <button onClick={() => {vidPlayer.current.play(); setStarted(true); AudioBeats();}} style={{width: '15vw', height: '4vw'}}>
+                {showWords ? "PRESS START" : ""}
             </button>
         </div> : "" }
         <video ref={vidPlayer} src={IntroVideo} onEnded={() => {End(true)}}/>

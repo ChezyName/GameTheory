@@ -4,19 +4,25 @@ type Quadrants = {
     namedID:string,
     link:string,
     image:any,
+    sfx:any,
 }
 
-const Quadrants = ({leftPos,topPos,namedID,link,image}:Quadrants) => {
+const Quadrants = ({leftPos,topPos,namedID,link,image,sfx}:Quadrants) => {
+
+    function playAudioOnHover(){
+        let audio = new Audio(sfx);
+        audio.play();
+    }
 
     function openLink(){
         if(link != "" && link != null && link != undefined){
             //replace '' with _blank for new tab opening
-            window.open(link, '');
+            window.open(link, '_self');
         }
     }
 
     return (
-        <div id={namedID} style={{
+        <div id={namedID} onMouseOver={playAudioOnHover} style={{
             width: "50vw",
             height: "50vh",
             position: "absolute",
