@@ -29,10 +29,10 @@ function App() {
       
       {!End ? <IntroSequence A={setA} B={setB} C={setC} D={setD} E={setE} End={setEnd}/> : "" }
 
-      { A ? <Quadrants sfx={G} leftPos={0} topPos={0} namedID='GAME' image={Trophy} link='https://www.youtube.com/@GameTheory'/> : "" }
-      { B ? <Quadrants sfx={Flm} leftPos={"50vw"} topPos={0} namedID='FILM' image={FILM} link='https://www.youtube.com/@FilmTheory'/> : "" }
-      { C ? <Quadrants sfx={F} leftPos={0} topPos={"50vh"} namedID='FOOD' image={FOOD} link='https://www.youtube.com/@FoodTheory'/> : "" }
-      { D ? <Quadrants sfx={S} leftPos={"50vw"} topPos={"50vh"} namedID='STYLE' image={STYLE} link='https://www.youtube.com/@StyleTheorists'/> : "" }
+      { A ? <Quadrants canPlay={End} sfx={G} leftPos={0} topPos={0} namedID='GAME' image={Trophy} link='https://www.youtube.com/@GameTheory'/> : "" }
+      { B ? <Quadrants canPlay={End} sfx={Flm} leftPos={"50vw"} topPos={0} namedID='FILM' image={FILM} link='https://www.youtube.com/@FilmTheory'/> : "" }
+      { C ? <Quadrants canPlay={End} sfx={F} leftPos={0} topPos={"50vh"} namedID='FOOD' image={FOOD} link='https://www.youtube.com/@FoodTheory'/> : "" }
+      { D ? <Quadrants canPlay={End} sfx={S} leftPos={"50vw"} topPos={"50vh"} namedID='STYLE' image={STYLE} link='https://www.youtube.com/@StyleTheorists'/> : "" }
     </>
   )
 }

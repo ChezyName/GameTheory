@@ -5,11 +5,13 @@ type Quadrants = {
     link:string,
     image:any,
     sfx:any,
+    canPlay:boolean,
 }
 
-const Quadrants = ({leftPos,topPos,namedID,link,image,sfx}:Quadrants) => {
+const Quadrants = ({leftPos,topPos,namedID,link,image,sfx,canPlay}:Quadrants) => {
 
     function playAudioOnHover(){
+        if(!canPlay) return;
         let audio = new Audio(sfx);
         audio.play();
     }
